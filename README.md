@@ -1,6 +1,9 @@
 
 # Django and React Simple Backend-Frontend Project
 This project aims to create a simple web application with a backend developed using Django and a frontend developed using React. The backend and frontend will be containerized using Docker, and a network will be created to run both containers in the same network.
+
+# Just Runs deploy.sh in your mechin or else , follow below steps rephares
+
 # Build commands
 -- build backend image
 
@@ -13,7 +16,6 @@ docker build -t backend:v1.0 .
 cd Todo-application/frontend
 
 docker build -t frontend:v1.0 .
-
 
 
 # After Build Run this comands
