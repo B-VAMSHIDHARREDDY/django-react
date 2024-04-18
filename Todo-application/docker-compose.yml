@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  backend:
+    image: vamshismallday1/backend:v1.0
+    ports:
+      - "8000:8000"
+    networks:
+      - todo-network
+
+  frontend:
+    image: vamshismallday1/frontend:v1.0
+    ports:
+      - "3000:3000"
+    environment:
+      - REACT_APP_BACKEND_URL=http://backend:8000
+    networks:
+      - todo-network
+
+networks:
+  todo-network:
+    driver: bridge
